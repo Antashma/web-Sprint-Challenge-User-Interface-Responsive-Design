@@ -1,93 +1,92 @@
-# Sprint Challenge: User Interface and Responsive Design - Multi-Page Website
+# Sprint Challenge: User Interface and Responsive Design
 
-This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored User Interface and Git. During this Sprint, you studied Semantic HTML, CSS Fundamentals, CSS Flexbox Module, and Git. In your challenge this week, you will demonstrate proficiency by creating a multi page website that has some missing HTML elements as well as CSS specificity problems that need to be solved.  You will also create an additional web page that will be linked to from a navigation you will build.
+This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a realistic project- a static site for a restaurant. During this Sprint, you studied Semantic HTML, CSS Fundamentals, CSS Flexbox Module, and Responsive Design. In your challenge this week, you will demonstrate proficiency by creating a multi page website that has some missing HTML elements as well as CSS specificity problems that need to be solved. You will also create an additional web page that will be linked to from a navigation you will build.
 
-## Instructions
+
+## Expectations
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
+This is an individual assessment. All work must be your own. Your Sprint Challenge score is a measure of your ability to work independently using the material covered this week. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days. As such, you are not allowed to collaborate. However, how can use any external resource or documentation you need including Guided Projects, Module Projects, or Google.
 
-You are not allowed to collaborate during the Sprint Challenge. Your work reflects your proficiency in user interface and your command of the concepts and techniques in semantic HTML, CSS fundamentals, CSS flexbox module, and git.
+Commit your code regularly and meaningfully. Check out this guide on how to make [meaningful commits](https://cbea.ms/git-commit/).
 
+In your solution, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work. Perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a Sprint Challenge that meets MVP than one that attempts too much and does not.
 
-## Commits
+**NOTE: Please make sure you are using Flexbox to layout your website. Floats, inline-block, tables, etc, should not be used for layout and will not result in a passing Sprint Challenge score.**
 
-Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons)
 
 ## Description
 
-In this challenge, you build a missing header (navigation and image) on the home page, update some CSS styling on the home page, and create an additional page (About) which will link from the navigation you created. You will also need to make both pages responsive for 500px. 
+In this challenge, you build a missing header and footer and update some CSS styling on the home page, then create an additional menu page which will link from the navigation you created. You will also make a mobile media query for each page. See further down for more specific instructions per page.
 
-In meeting the minimum viable product (MVP) specifications listed below, your web page should look like the solution screen shots of the home and about pages (found in the design-files folder):
+In meeting the minimum viable product (MVP) specifications listed below, your web page should look like the solution screen shots of the home and menu pages (found in the design-files folder):
 
-[Click here for the home page example](https://github.com/bloominstituteoftechnology/web-Sprint-Challenge-User-Interface-Responsive-Design/blob/janLaunch/design-files/home-desktop.png)
+[Click here for the home page example]()
 
-[Click here for home page mobile example](https://github.com/bloominstituteoftechnology/web-Sprint-Challenge-User-Interface-Responsive-Design/blob/janLaunch/design-files/home-mobile.png)
+[Click here for home page mobile example]()
 
-[Click here for the about page example](https://github.com/bloominstituteoftechnology/web-Sprint-Challenge-User-Interface-Responsive-Design/blob/janLaunch/design-files/about-desktop.png)
+[Click here for the menu page example]()
 
-[Click here for about page mobile example](https://github.com/bloominstituteoftechnology/web-Sprint-Challenge-User-Interface-Responsive-Design/blob/janLaunch/design-files/about-mobile.png)
+[Click here for menu page mobile example]()
+
 
 ## Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push -u origin `<firstName-lastName>`.
- 
-Follow these steps for completing your project.
-
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+1. Fork the repository, then clone from your fork.
+2. Go into Canvas and connect your repo to CodeGrade.
+4. DO NOT CREATE A BRANCH. You will be pushing your changes to the main/master today.
+5. cd into your repository on the command line and use `code .` to open VS Code.
+6. Open the terminal in VSC and type `npm install`. While this runs, click the split terminal icon.
+7. Next type `npm run test` in one side, and `npm run start` in the other side.
+8. Complete your work making regular commits to the main branch; your CodeGrade score will update each time you make a push.
 
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
+ 
+
+### Responsive Design 
+
+Before you jump in, take 10 minutes to review the design files. Take time to see how the home and menu pages are built. Think about the main concepts of Flexbox and how you could use rows or columns to simplify your code. A good developer will have a gameplan for both screen sizes before they type a single line of code. You could even draw on the design files or make your own simple wireframe with labels.
+
+You **must** use the Google Chrome developer tools during your HTML/CSS implementation process. The tools use emulation software to "pretend" that they are actually a smaller screen; you cannot get the same effect from simply pinching your browser smaller. This will also allow you to view sizes larger than your current monitor's size, such as the standard 1920x1080px desktop width. You will not be successful with properly implementing a responsive website without using the developer tools.
+
+* [ ] Desktop size should be responsive at 1920px width.
+* [ ] Mobile size should be responsive at 428px width.
+
+**NOTE: You may notice that your design doesn't look great between these sizes. This is totally normal; for a real product, there would be at least a tablet size intermediary design and likely several more breakpoints to improve the experience for a variety of screen sizes. If you would like to practice more, feel free to make the project look great at all sizes!**
+
+*OPTIONAL / STRETCH*
+* [ ] Tablet size should be responsive at 1024px width. There is no design file for this, be creative and follow the same design patterns as the other two screen sizes. :)
+* [ ] Additional media queries for any incremental fixes between major sizes or to support specific popular devices, e.g. 360px, 1280px.
+
 
 ### Home Page
 
-Review the provided design file for the home page.  Notice the navigation and header images are missing.
+[Review the provided design file for the home page](design-files/home.png).
 
-* [ ] Build the HTML and CSS to create the missing navigation and header.
-* [ ] Link the `About` navigation item to the [about.html](about.html) page
+* [ ] Build the HTML and CSS to create the missing header and footer sections.
+* [ ] Link the `Menu` navigation item to the [menu.html](menu.html) page.
+* [ ] Build the rest of the home page layout to match the design.
 
-You will also notice there are 10 boxes on the home page that need background colors.  Use this list below to correctly style each box (Note: inline styles are not acceptable. All styles should be written in your index.css file):
+Colors and fonts:
 
-* [ ] box1: `teal`
-* [ ] box2: `gold`
-* [ ] box3: `cadetblue`
-* [ ] box4: `coral`
-* [ ] box5: `crimson`
-* [ ] box6: `forestgreen`
-* [ ] box7: `darkorchid`
-* [ ] box8: `hotpink`
-* [ ] box9: `indigo`
-* [ ] box10: `dodgerblue`
-* [ ] footer and line color: `#ff4b00`
 
-### About Page
 
-[Review the provided design file for the about page](design-files/about.png). You have been provided the HTML wrapper, footer, and page content for the about page. Create the rest of the missing HTML and CSS to match the design file.
+### Menu Page
 
-* [ ] Copy and paste your home page navigation and header into the about page
-* [ ] Update the header image with the about page image
+[Review the provided design file for the menu page](design-files/menu.png).
+
+* [ ] Copy and paste your home page header and footer into the menu page.
+* [ ] Update the header image with the menu page image.
 * [ ] Link the `Home` navigation item back to the `index.html` page.
-* [ ] Build the rest of the about page layout to match the design
+* [ ] Build the rest of the menu page layout to match the design.
 
-In your solution, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
+Colors and fonts: 
 
-Note: Please make sure you are using flexbox to layout your website. Floats, inline-block, tables, etc, should not be used for layout. 
  
-### Responsive Design 
-Before you jump in, take 10 minutes to review your code. Take time to see how the home page about about page was built. During this time, Review the provided design files.
 
-Ensure your website is responsive at 500px such that your styles match the mobile design file for the home and about pages.
-
-## Submission Instructions 
- 
-Please submit the url to your pull request in Canvas
- 
 ## Extra Resources 
 🦄 [Sprint Study Guide](https://www.notion.so/bloomtech/b41259eac25944b6887a0418a6a4b6c6?v=555d6c33df854e38bc1307768e1483e8)
