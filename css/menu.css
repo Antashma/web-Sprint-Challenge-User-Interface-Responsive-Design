@@ -62,7 +62,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
-    color: white;
+    color: rgb(225, 239, 230);
     text-decoration: none;
 }
 
@@ -284,6 +284,63 @@ footer nav {
     
     .sm-icons {
         width: 25%;
+    }
+
+    /* menu */
+
+    .menu {
+        background-image: none;
+    }
+    
+    .menu-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: rgb(225, 239, 230);
+    }
+    
+    .menu h2 {
+        width: 80%;
+        padding-top: 10vh;
+        text-align: center;
+        border-bottom: 2rem solid rgb(0, 4, 17);
+    }
+    
+    .menu h2, .menu h3, .menu h4, .menu p {
+        color: rgb(0, 4, 17);
+    }
+    
+    .menu-section {
+        width: 80%;
+        margin: 5vh 10%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row1 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-section h3 {
+        padding: auto;
+        border: .5rem solid rgb(0, 4, 17);
+        text-align: center;
+    }
+    
+    .menu-section p, .menu-section h4 {
+        text-align: center;
+    }
+
+    .menu-section .menu-item:last-child {
+        border: none;
+    }
+    
+    .menu-item {
+        border-bottom: .5rem solid rgb(0, 4, 17);
     }
 
     /* footer section */
