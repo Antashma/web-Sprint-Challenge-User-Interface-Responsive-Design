@@ -53,7 +53,7 @@ table {
 
 html {
     max-width: 1920px;
-    max-width: 100%;
+    min-width: 428px;
     width: 100%;
     font-size: 62.5%;
 }
@@ -115,14 +115,14 @@ header nav {
 
 .links {
     width: 100%;
-    margin: 2.5vh 0;
+    padding: 2.5vh 0;
     display: flex;
     justify-content: space-evenly;
 }
 
 .sm-icons {
     width: 25%;
-    margin-bottom: 2.5vh;
+    padding-bottom: 2.5vh;
     display: flex;
     justify-content: space-evenly;
 }
@@ -161,7 +161,7 @@ header nav {
 }
 
 .food {
-    margin: 2vh 0;
+    padding: 2vh 0;
 }
 
 /* about us section */

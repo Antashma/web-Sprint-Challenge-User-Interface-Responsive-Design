@@ -53,6 +53,7 @@ table {
 
 html {
     max-width: 1920px;
+    min-width: 428px;
     font-size: 62.5%;
 }
 
@@ -117,14 +118,14 @@ header nav {
 
 .links {
     width: 100%;
-    margin: 2.5vh 0;
+    padding: 2.5vh 0;
     display: flex;
     justify-content: space-evenly;
 }
 
 .sm-icons {
     width: 25%;
-    margin-bottom: 2.5vh;
+    padding-bottom: 2.5vh;
     display: flex;
     justify-content: space-evenly;
 }
@@ -169,8 +170,8 @@ header nav {
 }
 
 .menu-section {
-    width: 30%;
-    margin: 5vh 10%;
+    width: 50%;
+    padding: 5vh 10%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -315,7 +316,7 @@ footer nav {
     
     .menu-section {
         width: 80%;
-        margin: 5vh 10%;
+        padding: 5vh 10%;
         display: flex;
         flex-wrap: wrap;
     }
