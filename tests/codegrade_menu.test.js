@@ -1,16 +1,16 @@
-import { fireEvent, getByText, waitFor } from '@testing-library/dom';
+import { fireEvent, getByText } from '@testing-library/dom';
 import '@testing-library/jest-dom/extend-expect';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
 import path from 'path';
 import { fail } from 'assert';
 
-const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
+const html = fs.readFileSync(path.resolve(__dirname, '../menu.html'), 'utf8');
 
 let dom;
 let container;
 
-describe('index.html', () => {
+describe('menu.html', () => {
     beforeEach(() => {
         // Constructing a new JSDOM with this option is the key
         // to getting the code in the script tag to execute.
@@ -18,7 +18,7 @@ describe('index.html', () => {
         // https://github.com/jsdom/jsdom#executing-scripts
         dom = new JSDOM(html, { runScripts: 'dangerously' });
         container = dom.window.document.body;
-    })
+    });
 
     it('renders a header title', () => {
         const headerTitle = container.querySelector('h1').innerHTML;
@@ -40,7 +40,7 @@ describe('index.html', () => {
         expect(getByText(headerNavLinks, /Contact/i)).toBeInTheDocument();
     });
 
-    it('menu link correctly links to new page', async () => {
+    it('header menu link correctly links to new page', async () => {
         const menuLink = container.querySelector('header nav a');
         expect(menuLink.href.includes('menu.html')).toEqual(true);
     });
@@ -62,20 +62,71 @@ describe('index.html', () => {
                 expect(index.includes('twitter')).toBe(true);
             } else if(index.includes('instagram')) {
                 expect(index.includes('instagram')).toBe(true);
-            } else {
-                fail(`Hit an unexpected icon tag`);
-            }
+            } else fail(`Hit an unexpected icon tag`);
         }
     });
 
-    it('renders nine images in the OUR FOOD section', () => {
-        const foodPics = container.querySelector('.gallery-container');
+    it('renders a menu title', () => {
+        const menuTitle = container.querySelector('h2').innerHTML;
+        const regex = /Food &amp; Drink/i;
+        expect(menuTitle).toMatch(regex);
+    });
 
-        let foodPicsArr = foodPics.innerHTML.split(/src=/i);
-        // shift is to get rid of initial index that splits before the i tag
-        foodPicsArr.shift();
+    it('renders five menu-section class sections with proper titles in correct order', () => {
+        const menuSections = container.querySelectorAll('.menu-section');
+        expect(menuSections.length).toBe(5);
 
-        expect(foodPicsArr.length).toBe(9);
+        for(let i = 0; i < menuSections.length; i++) {
+            if(menuSections[i].innerHTML.includes('Drinks')) {
+                expect(getByText(menuSections[0], /Drinks/i)).toBeInTheDocument();
+            } else if(menuSections[i].innerHTML.includes('Appetizers')) {
+                expect(getByText(menuSections[1], /Appetizers/i)).toBeInTheDocument();
+            } else if(menuSections[i].innerHTML.includes('Soup and Salad')) {
+                expect(getByText(menuSections[2], /Soup and Salad/i)).toBeInTheDocument();
+            } else if(menuSections[i].innerHTML.includes('Entrees')) {
+                expect(getByText(menuSections[3], /Entrees/i)).toBeInTheDocument();
+            } else if(menuSections[i].innerHTML.includes('Desserts')) {
+                expect(getByText(menuSections[4], /Desserts/i)).toBeInTheDocument();
+            } else fail(`Inappropriate menu section name`);
+        }
+    });
+
+    it('renders three to five menu-items per menu-section', () => {
+        const menuSections = container.querySelectorAll('.menu-section');
+        
+        menuSections.forEach((section) => {
+            const menuItems = section.querySelectorAll('.menu-item');
+
+            if(menuItems.length >= 3 && menuItems.length <= 5) {
+                expect(menuItems.length >= 3 && menuItems.length <= 5).toBe(true);
+            } else fail(`Inappropriate number of menu items.`);
+        });
+    });
+
+    it('renders an h4 for name and price per each menu-item', () => {
+        const menuSections = container.querySelectorAll('.menu-section');
+        
+        menuSections.forEach((section) => {
+            const menuItems = section.querySelectorAll('.menu-item');
+
+            menuItems.forEach((item) => {
+                let itemsh4Count = item.innerHTML.match(/<h4/gi).length;
+                expect(itemsh4Count).toBe(2);
+            });
+        });
+    });
+
+    it('renders a p for description and optional V/GF label per each menu-item', () => {
+        const menuSections = container.querySelectorAll('.menu-section');
+        
+        menuSections.forEach((section) => {
+            const menuItems = section.querySelectorAll('.menu-item');
+
+            menuItems.forEach((item) => {
+                let itemsPCount = item.innerHTML.match(/<p/gi).length;
+                expect(itemsPCount === 1 || itemsPCount === 2).toBe(true);
+            });
+        });
     });
 
     it('renders an input and button in footer nav with appropriate text', () => {
