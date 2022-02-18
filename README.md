@@ -22,13 +22,13 @@ In this challenge, you build a missing header and footer and update some CSS sty
 
 In meeting the minimum viable product (MVP) specifications listed below, your web page should look like the solution screen shots of the home and menu pages (found in the design-files folder):
 
-[Click here for the home page example]()
+[Click here for the home page example](design-files/home-desktop.png)
 
-[Click here for home page mobile example]()
+[Click here for home page mobile example](design-files/home-mobile.png)
 
-[Click here for the menu page example]()
+[Click here for the menu page example](design-files/menu-desktop.png)
 
-[Click here for menu page mobile example]()
+[Click here for menu page mobile example](design-files/menu-mobile.png)
 
 
 ## Project Set Up
@@ -38,8 +38,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your we
 4. DO NOT CREATE A BRANCH. You will be pushing your changes to the main/master today.
 5. cd into your repository on the command line and use `code .` to open VS Code.
 6. Open the terminal in VSC and type `npm install`. While this runs, click the split terminal icon.
-7. Next type `npm run test` in one side, and `npm run start` in the other side.
-8. Complete your work making regular commits to the main branch; your CodeGrade score will update each time you make a push.
+7. Next type `npm run test` in one side, and use the other side for git commands or general use.
+8. Download the Live Server extension from the Extensions tab on the left side of your VS Code. After it is done installing, click "Go Live" on the bottom right side of your screen to run your HTML file.
+9. Complete your work making regular commits to the main branch; your CodeGrade score will update each time you make a push.
 
 
 ## Minimum Viable Product
@@ -65,26 +66,37 @@ You **must** use the Google Chrome developer tools during your HTML/CSS implemen
 
 ### Home Page
 
-[Review the provided design file for the home page](design-files/home.png).
+Review the provided design file for the home page.
 
 * [ ] Build the HTML and CSS to create the missing header and footer sections.
+* [ ] Link the h1 page title to the [index.html](index.html) page.
 * [ ] Link the `Menu` navigation item to the [menu.html](menu.html) page.
 * [ ] Build the rest of the home page layout to match the design.
 
 Colors and fonts:
-
+Light text: rgb(225, 239, 230);
+Dark background: rgb(0, 4, 17);
+Dark transparency: background-color: rgb(0, 4, 17, .8);
 
 
 ### Menu Page
 
-[Review the provided design file for the menu page](design-files/menu.png).
+Review the provided design files for the menu page.
 
-* [ ] Copy and paste your home page header and footer into the menu page.
+* [ ] Copy and paste your home page header anad footer into the menu page.
 * [ ] Update the header image with the menu page image.
 * [ ] Link the `Home` navigation item back to the `index.html` page.
 * [ ] Build the rest of the menu page layout to match the design.
 
-Colors and fonts: 
+Colors and fonts for desktop:
+Light text: rgb(225, 239, 230);
+Dark background: rgb(0, 4, 17);
+Dark transparency: background-color: rgb(0, 4, 17, .8);
+
+Colors and fonts for mobile: 
+Dark text: rgb(0, 4, 17);
+Light background: rgb(225, 239, 230);
+Dark borders: rgb(0, 4, 17);
 
  
 
