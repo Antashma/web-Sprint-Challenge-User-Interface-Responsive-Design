@@ -20,10 +20,12 @@ describe('index.html', () => {
         container = dom.window.document.body;
     })
 
-    it('renders a header title', () => {
+    it('renders a header title that links to home page', () => {
         const headerTitle = container.querySelector('h1').innerHTML;
+        const headerTitleATag = header.querySelector('a');
         const regex = /BLOOMTECH BAR AND GRILL/i;
         expect(headerTitle).toMatch(regex);
+        expect(headerTitleATag.href.includes('index.html')).toEqual(true);
     });
 
     it('renders the correct four links in header nav', () => {

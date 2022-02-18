@@ -71,6 +71,7 @@ Review the provided design file for the home page.
 * [ ] Build the HTML and CSS to create the missing header and footer sections.
 * [ ] Link the h1 page title to the [index.html](index.html) page.
 * [ ] Link the `Menu` navigation item to the [menu.html](menu.html) page.
+* [ ] Create social media buttons on header for [Facebook](https://fontawesome.com/search?q=facebook&s=solid%2Cbrands), [Twitter](https://fontawesome.com/search?q=twitter&s=solid%2Cbrands), and [Instagram](https://fontawesome.com/search?q=instagram&s=solid%2Cbrands) with the linked icons.
 * [ ] Build the rest of the home page layout to match the design.
 
 Colors and fonts:
@@ -86,6 +87,9 @@ Review the provided design files for the menu page.
 * [ ] Copy and paste your home page header anad footer into the menu page.
 * [ ] Update the header image with the menu page image.
 * [ ] Link the `Home` navigation item back to the `index.html` page.
+* [ ] Create a container for the container with class "menu-container"
+* [ ] Create a container for each section (e.g. drinks or entrees) with class "menu-section"
+* [ ] Create a container for each item (e.g. soda or burger) with class "menu-item"
 * [ ] Build the rest of the menu page layout to match the design.
 
 Colors and fonts for desktop:
@@ -98,7 +102,6 @@ Dark text: rgb(0, 4, 17);
 Light background: rgb(225, 239, 230);
 Dark borders: rgb(0, 4, 17);
 
- 
 
 ## Extra Resources 
 🦄 [Sprint Study Guide](https://www.notion.so/bloomtech/b41259eac25944b6887a0418a6a4b6c6?v=555d6c33df854e38bc1307768e1483e8)
