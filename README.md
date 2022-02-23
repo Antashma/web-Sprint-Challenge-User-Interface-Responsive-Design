@@ -20,15 +20,15 @@ In your solution, it is essential that you follow best practices and produce cle
 
 In this challenge, you build a missing header and footer and update some CSS styling on the home page, then create an additional menu page which will link from the navigation you created. You will also make a mobile media query for each page. See further down for more specific instructions per page.
 
-In meeting the minimum viable product (MVP) specifications listed below, your web page should look like the solution screen shots of the home and menu pages (found in the design-files folder):
+In meeting the minimum viable product (MVP) specifications listed below, your web page should look like the solution screen shots of the home and menu pages:
 
-[Click here for the home page example](design-files/home-desktop.png)
+[Click here for the home page example](https://i.ibb.co/SRcbcdH/home-desktop.png)
 
-[Click here for home page mobile example](design-files/home-mobile.png)
+[Click here for home page mobile example](https://i.ibb.co/svmmXzn/home-mobile.png)
 
-[Click here for the menu page example](design-files/menu-desktop.png)
+[Click here for the menu page example](https://i.ibb.co/NxLyLCH/menu-desktop.png)
 
-[Click here for menu page mobile example](design-files/menu-mobile.png)
+[Click here for menu page mobile example](https://i.ibb.co/Wsc2vpz/menu-mobile.png)
 
 
 ## Project Set Up
