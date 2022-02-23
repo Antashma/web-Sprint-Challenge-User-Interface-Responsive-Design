@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { fail } from 'assert';
 
-const html = fs.readFileSync(path.resolve(__dirname, '../menu.html'), 'utf8');
+const html = fs.readFileSync(path.resolve(__dirname, './menu.html'), 'utf8');
 
 let dom;
 let container;
