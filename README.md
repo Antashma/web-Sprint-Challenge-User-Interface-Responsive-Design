@@ -56,6 +56,7 @@ You **must** use the Google Chrome developer tools during your HTML/CSS implemen
 
 * [ ] Desktop size should be responsive at 1920px width.
 * [ ] Mobile size should be responsive at 428px width.
+* [ ] Don't forget your viewport meta tag!
 
 **NOTE: You may notice that your design doesn't look great between these sizes. This is totally normal; for a real product, there would be at least a tablet size intermediary design and likely several more breakpoints to improve the experience for a variety of screen sizes. If you would like to practice more, feel free to make the project look great at all sizes!**
 
@@ -72,7 +73,7 @@ Review the provided design file for the home page.
 * [ ] Link the h1 page title to the [index.html](index.html) page.
 * [ ] Link the `Menu` navigation item to the [menu.html](menu.html) page.
 * [ ] Create social media buttons on header for [Facebook](https://fontawesome.com/search?q=facebook&s=solid%2Cbrands), [Twitter](https://fontawesome.com/search?q=twitter&s=solid%2Cbrands), and [Instagram](https://fontawesome.com/search?q=instagram&s=solid%2Cbrands) with the linked icons.
-* [ ] Build the rest of the home page layout to match the design.
+* [ ] Build the rest of the home page layout to match the design. Much of it has already been implemented; you should only need to fix the middle gallery section.
 
 Colors and fonts:
 Light text: rgb(225, 239, 230);
@@ -87,10 +88,9 @@ Review the provided design files for the menu page.
 * [ ] Copy and paste your home page header anad footer into the menu page.
 * [ ] Update the header image with the menu page image.
 * [ ] Link the `Home` navigation item back to the `index.html` page.
-* [ ] Create a container for the container with class "menu-container"
+* [ ] Create a container for the menu with class "menu-container"
 * [ ] Create a container for each section (e.g. drinks or entrees) with class "menu-section"
 * [ ] Create a container for each item (e.g. soda or burger) with class "menu-item"
-* [ ] Build the rest of the menu page layout to match the design.
 
 Colors and fonts for desktop:
 Light text: rgb(225, 239, 230);
@@ -103,5 +103,11 @@ Light background: rgb(225, 239, 230);
 Dark borders: rgb(0, 4, 17);
 
 
+### Additional Stretch Goals
+* [ ] Create additional HTML and CSS for Reservations, Special Offers, and Contact pages.
+* [ ] Make those additional pages responsive.
+* [ ] Add animations!
+
+
 ## Extra Resources 
-🦄 [Sprint Study Guide](https://www.notion.so/bloomtech/b41259eac25944b6887a0418a6a4b6c6?v=555d6c33df854e38bc1307768e1483e8)
+🦄 [Sprint Study Guide](https://bloomtech.notion.site/bloomtech/Unit-1-Sprint-3-Study-Guide-8769748b8c284f7095f6542fe24192a7)

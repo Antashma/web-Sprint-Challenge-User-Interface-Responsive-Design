@@ -22,7 +22,7 @@ describe('menu.html', () => {
 
     it('renders a header title that links to home page', () => {
         const headerTitle = container.querySelector('h1').innerHTML;
-        const headerTitleATag = header.querySelector('a');
+        const headerTitleATag = container.querySelector('a');
         const regex = /BLOOMTECH BAR AND GRILL/i;
         expect(headerTitle).toMatch(regex);
         expect(headerTitleATag.href.includes('index.html')).toEqual(true);
@@ -75,7 +75,7 @@ describe('menu.html', () => {
     });
 
     it('renders five menu-section class sections with proper titles in correct order', () => {
-        const menuSections = container.querySelectorAll('.menu-section');
+        const menuSections = Array.from(container.querySelectorAll('.menu-section'));
         expect(menuSections.length).toBe(5);
 
         for(let i = 0; i < menuSections.length; i++) {
@@ -94,10 +94,12 @@ describe('menu.html', () => {
     });
 
     it('renders three to five menu-items per menu-section', () => {
-        const menuSections = container.querySelectorAll('.menu-section');
+        const menuSections = Array.from(container.querySelectorAll('.menu-section'));
+        if(menuSections === undefined || menuSections === null || menuSections.length === 0) fail(`Inappropriate number of menu sections.`);
         
         menuSections.forEach((section) => {
-            const menuItems = section.querySelectorAll('.menu-item');
+            const menuItems = Array.from(section.querySelectorAll('.menu-item'));
+            if(menuItems === undefined || menuSections === null || menuSections.length === 0) fail(`Inappropriate number of menu items.`);
 
             if(menuItems.length >= 3 && menuItems.length <= 5) {
                 expect(menuItems.length >= 3 && menuItems.length <= 5).toBe(true);
@@ -106,10 +108,12 @@ describe('menu.html', () => {
     });
 
     it('renders an h4 for name and price per each menu-item', () => {
-        const menuSections = container.querySelectorAll('.menu-section');
+        const menuSections = Array.from(container.querySelectorAll('.menu-section'));
+        if(menuSections === undefined || menuSections === null || menuSections.length === 0) fail(`Inappropriate number of menu sections.`);
         
         menuSections.forEach((section) => {
-            const menuItems = section.querySelectorAll('.menu-item');
+            const menuItems = Array.from(section.querySelectorAll('.menu-item'));
+            if(menuItems === undefined || menuSections === null || menuSections.length === 0) fail(`Inappropriate number of menu items.`);
 
             menuItems.forEach((item) => {
                 let itemsh4Count = item.innerHTML.match(/<h4/gi).length;
@@ -119,10 +123,12 @@ describe('menu.html', () => {
     });
 
     it('renders a p for description and optional V/GF label per each menu-item', () => {
-        const menuSections = container.querySelectorAll('.menu-section');
+        const menuSections = Array.from(container.querySelectorAll('.menu-section'));
+        if(menuSections === undefined || menuSections === null || menuSections.length === 0) fail(`Inappropriate number of menu sections.`);
         
         menuSections.forEach((section) => {
-            const menuItems = section.querySelectorAll('.menu-item');
+            const menuItems = Array.from(section.querySelectorAll('.menu-item'));
+            if(menuItems === undefined || menuSections === null || menuSections.length === 0) fail(`Inappropriate number of menu items.`);
 
             menuItems.forEach((item) => {
                 let itemsPCount = item.innerHTML.match(/<p/gi).length;
