@@ -20,6 +20,16 @@ describe('menu.html', () => {
         container = dom.window.document.body;
     });
 
+    it('renders with an external stylesheet', () => {
+        const cssLinkTag = dom.window.document.head.querySelector('link[href="css/menu.css"]');
+        expect(cssLinkTag).toBeInTheDocument();
+    });
+
+    it('has a viewport tag', () => {
+        const viewportTag = dom.window.document.head.querySelector('meta[content="width=device-width, initial-scale=1.0"]');
+        expect(viewportTag).toBeInTheDocument();
+    });
+
     it('renders a header title that links to home page', () => {
         const headerTitle = container.querySelector('h1').innerHTML;
         const headerTitleATag = container.querySelector('a');
